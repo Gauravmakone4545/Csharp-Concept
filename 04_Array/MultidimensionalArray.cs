@@ -1,0 +1,21 @@
+using System;
+
+class MultidimensionalArray
+{
+    static void Main()
+    {
+        int[,] matrix = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
+
+        Console.WriteLine("Element [1,2] : " + matrix[1, 2]); // 6
+
+        int rows = matrix.GetLength(0);
+        int cols = matrix.GetLength(1);
+
+        for (int r = 0; r < rows; r++)
+        {
+            for (int c = 0; c < cols; c++)
+                Console.Write(matrix[r, c] + " ");
+            Console.WriteLine();
+        }
+    }
+}
